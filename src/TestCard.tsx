@@ -22,12 +22,12 @@ interface TestCardProps {
   description: string;
 }
 
-const TestCard = (props: TestCardProps) => {
+const TestCard = ({ title, description }: TestCardProps) => {
   return (
     <div>
       <Img></Img>
-      <Title>{props.title}</Title>
-      <Description>{props.description}</Description>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
     </div>
   );
 };
