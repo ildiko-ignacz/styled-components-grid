@@ -46,27 +46,27 @@ const Col = styled.div`
     padding: ${rem(24)};
     width: 100%;
 
-    ${({span1}) => span1 && css `
+    ${({col}) => col === "1" && css `
         width: calc(100%/12);
     `}
 
-    ${({span6}) => span6 && css`
+    ${({col}) => col === "6" && css`
         width: calc(100%/2);
     ` }
 
-    ${({span4}) => span4 && css `
+    ${({col}) => col === "4" && css `
         width: calc(100%/3);
     `}
 
-    ${({span3}) => span3 && css `
+    ${({col}) => col === "3" && css `
         width: calc(100%/4);
     `}
 
-    ${({col5}) => col5 && css `
+    ${({col}) => col === "5" && css `
         width: calc(100%/5);
     `}
 
-    ${({span2}) => span2 && css `
+    ${({col}) => col === "2" && css `
         width: calc(100%/6);
     `}
 `
@@ -75,57 +75,55 @@ const Grid = () => {
     return (
             <GridContainer>
                 <Row center >
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-                    <Col span1>span1</Col>
-               
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col>
+                    <Col col="1">span1</Col> 
                 </Row>
 
                 <Row spaceBetween alignCenter>
-                    <Col span6>span6</Col>
-                    <Col span6 style={{height: "200px"}}>span6</Col>
+                    <Col col="6">span6</Col>
+                    <Col col="6" style={{height: "200px"}}>span6</Col>
                 </Row>
 
                 <Row flexEnd>
-                    <Col span4>span4</Col>
-                    <Col span4>span4</Col>
-                    <Col span4>span4</Col>
+                    <Col col="4">span4</Col>
+                    <Col col="4">span4</Col>
+                    <Col col="4">span4</Col>
                 </Row>
 
                 <Row>
-                    <Col span3>span3</Col>
-                    <Col span3>span3</Col>
-                    <Col span3>span3</Col>
-                    <Col span3>span3</Col>
+                    <Col col="3">span3</Col>
+                    <Col col="3">span3</Col>
+                    <Col col="3">span3</Col>
+                    <Col col="3">span3</Col>
                 </Row>
 
                 <Row>
-                    <Col col5>col5</Col>
-                    <Col col5>col5</Col>
-                    <Col col5>col5</Col>
-                    <Col col5>col5</Col>
-                    <Col col5>col5</Col>
+                    <Col col="5">col5</Col>
+                    <Col col="5">col5</Col>
+                    <Col col="5">col5</Col>
+                    <Col col="5">col5</Col>
+                    <Col col="5">col5</Col>
                 </Row>
 
                 <Row>
-                    <Col span2>span2</Col>
-                    <Col span2>span2</Col>
-                    <Col span2>span2</Col>
-                    <Col span2>span2</Col>
-                    <Col span2>span2</Col>
-                    <Col span2>span2</Col>
-
-                
+                    <Col col="2">span2</Col>
+                    <Col col="2">span2</Col>
+                    <Col col="2">span2</Col>
+                    <Col col="2">span2</Col>
+                    <Col col="2">span2</Col>
+                    <Col col="2">span2</Col>
                 </Row>
+
             </GridContainer> 
     )
 }
